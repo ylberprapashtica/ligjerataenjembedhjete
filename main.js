@@ -6,8 +6,20 @@ var personi1 = {
     mosha: 28,
     gjinia: true,
     addresa: {
-        rruga: "Rruga B",
+        rruga: "Rruga A",
         numer: "21"
+    },
+    emrinPlote: function() {
+        return this.emri + " " + this.mbiemri;
+    },
+    ndrroAdresen: function(rrugaRe, numerRi) {
+        this.addresa.rruga = rrugaRe;
+        this.addresa.numer = numerRi;
+    },
+    shtpyAdresen: function() {
+        console.log("Vendi ku banon " + this.emri + " " + this.mbiemri + " eshte " + 
+        this.addresa.rruga + ", " + this.addresa.numer
+        )
     }
 }
 
@@ -19,30 +31,53 @@ var personi2 = {
     addresa: {
         rruga: "Rruga B",
         numer: "22"
+    },
+    emrinPlote: function() {
+        return this.emri + " " + this.mbiemri;
+    },
+    ndrroAdresen: function(rrugaRe, numerRi) {
+        this.addresa.rruga = rrugaRe;
+        this.addresa.numer = numerRi;
+    },
+    shtpyAdresen: function() {
+        console.log("Vendi ku banon " + this.emri + " " + this.mbiemri + " eshte " + 
+        this.addresa.rruga + ", " + this.addresa.numer
+        )
     }
 }
 
 var personi3 = {
-    emri: "Yiber",
+    emri: "Ylber",
     mbiemri: "Prapashtica",
     mosha: 26,
     gjinia: false,
     addresa: {
         rruga: "Rruga C",
         numer: "8"
+    },
+    emrinPlote: function() {
+        return this.emri + " " + this.mbiemri;
+    },
+    ndrroAdresen: function(rrugaRe, numerRi) {
+        this.addresa.rruga = rrugaRe;
+        this.addresa.numer = numerRi;
+    },
+     shtpyAdresen: function() {
+        console.log("Vendi ku banon " + this.emri + " " + this.mbiemri + " eshte " + 
+        this.addresa.rruga + ", " + this.addresa.numer
+        )
     }
 }
 
-console.log(personi1.emri, personi1.mbiemri, personi1.mosha, personi1.gjinia);
-console.log(personi2.emri, personi2.mbiemri, personi2.mosha, personi2.gjinia);
-console.log(personi3.emri, personi3.mbiemri, personi3.mosha, personi3.gjinia);
+personi1.shtpyAdresen();
+personi2.shtpyAdresen();
+personi3.shtpyAdresen();
 
-personi3.emri = "Ylber";
+personi1.ndrroAdresen("Rruga D", 4);
+personi3.ndrroAdresen("Rruga H", 7);
 
-console.log(personi3.emri, personi3.mbiemri, personi3.mosha);
+personi1.shtpyAdresen();
+personi2.shtpyAdresen();
+personi3.shtpyAdresen();
 
-console.log("Adersa e " + personi1.emri + " " + personi1.mbiemri + " eshte " + 
-personi1.addresa.rruga + ", " + personi1.addresa.numer
-)
-
-console.log(personi1.gjatess);
+document.getElementById("test");
